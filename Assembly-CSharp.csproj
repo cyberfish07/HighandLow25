@@ -61,20 +61,36 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\DimensionManager.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Man\Scripts\FollowTarget.cs" />
-    <Compile Include="Assets\CameraSwitcher.cs" />
+    <Compile Include="Assets\Scripts\FacingCamera.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Scripts\Bullet.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Man\Scripts\EightDirectionMovement.cs" />
+    <Compile Include="Assets\Scripts\CameraSwitcher.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Scripts\Shooter.cs" />
+    <Compile Include="Assets\Scripts\Switch.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Scripts\RandomAniStart.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Man\Scripts\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\LockableObject.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\BoxCarry.cs" />
+    <Compile Include="Assets\Scripts\Box.cs" />
+    <Compile Include="Assets\Scripts\GravitySwitch.cs" />
+    <Compile Include="Assets\Scripts\PressurePlate.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Scripts\Potal.cs" />
     <Compile Include="Assets\LowPolyTerrain-Mesa\Scripts\Mob.cs" />
+    <Compile Include="Assets\Scripts\DestroyZone.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\SC Post Effects\Shaders\DepthNormals.shader" />
     <None Include="Assets\LowPolyTerrain-Mesa\Shaders\UnlitScroller.shader" />
+    <None Include="Assets\SC Post Effects\Shaders\Pipeline\Pipeline.hlsl" />
+    <None Include="Assets\SC Post Effects\Shaders\Pipeline\URP.hlsl" />
     <None Include="Assets\LowPolyTerrain-Mesa\Readme.txt" />
+    <None Include="Assets\SC Post Effects\Shaders\Blurring.hlsl" />
+    <None Include="Assets\SC Post Effects\Shaders\Blending.hlsl" />
+    <None Include="Assets\SC Post Effects\Shaders\SCPE.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1217,6 +1233,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
@@ -1259,6 +1279,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="sc.posteffects.editor.csproj">
+      <Project>{35643F84-72F0-B3E3-9D71-6CB6DD554258}</Project>
+      <Name>sc.posteffects.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.posteffects.runtime.csproj">
+      <Project>{39CCC274-33A2-696F-E80E-B476717D4AEB}</Project>
+      <Name>sc.posteffects.runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

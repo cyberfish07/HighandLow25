@@ -1272,6 +1272,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
@@ -1317,6 +1321,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{6FD30622-B1D7-7B5C-6421-484A5F24C06F}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.posteffects.editor.csproj">
+      <Project>{35643F84-72F0-B3E3-9D71-6CB6DD554258}</Project>
+      <Name>sc.posteffects.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.posteffects.runtime.csproj">
+      <Project>{39CCC274-33A2-696F-E80E-B476717D4AEB}</Project>
+      <Name>sc.posteffects.runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
