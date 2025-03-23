@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public CameraSwitcher cameraSwitcher;
     public Animator animator;
-    public Transform rotateTarget; // ✅ 需要旋转的子物体
+    public Transform rotateTarget;
 
     void Awake()
     {
@@ -57,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", speed);
         }
 
-        // ✅ 控制 rotateTarget 的旋转，而不是整个角色
         if (rotateTarget != null)
         {
             if (inputDirection.x < 0 && facingRight)
@@ -72,10 +71,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // ✅ 触发跳跃
         if (allowJump && Input.GetKeyDown(jumpKey) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+
+            if (animator != null)
+            {
+                animator.SetTrigger("Jump"); // ✅ 设置 Jump trigger
+            }
         }
     }
 
